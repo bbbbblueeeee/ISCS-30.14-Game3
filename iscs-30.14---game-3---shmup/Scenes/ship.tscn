@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://i3fwab1w7lbq"]
+
+[ext_resource type="Texture2D" uid="uid://b2m0stx3mtlkq" path="res://Assets/playerShip.png" id="1_78pfh"]
+[ext_resource type="Script" uid="uid://d0eqlvu6f6ug0" path="res://Scripts/Components/move_component.gd" id="2_4qyt1"]
+[ext_resource type="Script" uid="uid://drohiakh7th0a" path="res://Scripts/Components/move_input_component.gd" id="3_xxxu3"]
+[ext_resource type="Script" uid="uid://cp3d471w8ilh" path="res://Scripts/Components/position_clamp_component.gd" id="4_6ejuo"]
+
+[node name="Ship" type="Node2D" unique_id=2034803724]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1494139884]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_78pfh")
+
+[node name="MoveComponent" type="Node" parent="." unique_id=1441635439 node_paths=PackedStringArray("actor")]
+script = ExtResource("2_4qyt1")
+actor = NodePath("..")
+metadata/_custom_type_script = "uid://d0eqlvu6f6ug0"
+
+[node name="MoveInputComponent" type="Node" parent="." unique_id=494940132 node_paths=PackedStringArray("move_component")]
+script = ExtResource("3_xxxu3")
+move_component = NodePath("../MoveComponent")
+metadata/_custom_type_script = "uid://drohiakh7th0a"
+
+[node name="PositionClampComponent" type="Node" parent="." unique_id=1455995036 node_paths=PackedStringArray("actor")]
+script = ExtResource("4_6ejuo")
+actor = NodePath("..")
+metadata/_custom_type_script = "uid://cp3d471w8ilh"
