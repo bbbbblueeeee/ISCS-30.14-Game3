@@ -1,5 +1,5 @@
 class_name PositionClampComponent
-extends Node
+extends Node2D
 
 
 @export var actor: Node2D

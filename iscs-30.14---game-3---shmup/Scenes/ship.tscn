@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://i3fwab1w7lbq"]
 
+[ext_resource type="Script" uid="uid://bql1qlviac2uu" path="res://Scripts/ship.gd" id="1_8aq7e"]
 [ext_resource type="Texture2D" uid="uid://b2m0stx3mtlkq" path="res://Assets/playerShip.png" id="1_78pfh"]
 [ext_resource type="Script" uid="uid://d0eqlvu6f6ug0" path="res://Scripts/Components/move_component.gd" id="2_4qyt1"]
 [ext_resource type="Script" uid="uid://drohiakh7th0a" path="res://Scripts/Components/move_input_component.gd" id="3_xxxu3"]
 [ext_resource type="Script" uid="uid://cp3d471w8ilh" path="res://Scripts/Components/position_clamp_component.gd" id="4_6ejuo"]
+[ext_resource type="Script" uid="uid://bo15wb3cbk0w5" path="res://Scripts/Components/spawner_component.gd" id="6_cmder"]
+[ext_resource type="PackedScene" uid="uid://o2mdkm65eya4" path="res://Scenes/laser.tscn" id="7_fwcnm"]
+[ext_resource type="Script" uid="uid://dxpmq61ynnli1" path="res://Scripts/Components/scale_component.gd" id="8_kxdp2"]
 
 [node name="Ship" type="Node2D" unique_id=2034803724]
+script = ExtResource("1_8aq7e")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1494139884]
 scale = Vector2(0.2, 0.2)
@@ -21,7 +26,27 @@ script = ExtResource("3_xxxu3")
 move_component = NodePath("../MoveComponent")
 metadata/_custom_type_script = "uid://drohiakh7th0a"
 
-[node name="PositionClampComponent" type="Node" parent="." unique_id=1455995036 node_paths=PackedStringArray("actor")]
+[node name="PositionClampComponent" type="Node2D" parent="." unique_id=685738571 node_paths=PackedStringArray("actor")]
 script = ExtResource("4_6ejuo")
 actor = NodePath("..")
 metadata/_custom_type_script = "uid://cp3d471w8ilh"
+
+[node name="LeftMarker" type="Marker2D" parent="." unique_id=1794583810]
+position = Vector2(-9, -1)
+
+[node name="RightMarker" type="Marker2D" parent="." unique_id=510738636]
+position = Vector2(9, -1)
+
+[node name="SpawnerComponent" type="Node2D" parent="." unique_id=56197136]
+script = ExtResource("6_cmder")
+scene = ExtResource("7_fwcnm")
+metadata/_custom_type_script = "uid://bo15wb3cbk0w5"
+
+[node name="FireTimer" type="Timer" parent="." unique_id=1012526923]
+wait_time = 0.35
+autostart = true
+
+[node name="ScaleComponent" type="Node" parent="." unique_id=1201873697 node_paths=PackedStringArray("sprite")]
+script = ExtResource("8_kxdp2")
+sprite = NodePath("..")
+metadata/_custom_type_script = "uid://dxpmq61ynnli1"
