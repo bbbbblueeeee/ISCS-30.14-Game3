@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://bg2ef0yiieq4b"]
 
 [ext_resource type="PackedScene" uid="uid://i3fwab1w7lbq" path="res://Scenes/ship.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://lwmwqky73mwk" path="res://Scenes/parallax_background.tscn" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://cr68p6uvtfq1t" path="res://Scenes/enemy_generator.tscn" id="4_8j60k"]
 
 [node name="World" type="Node2D" unique_id=1932602928]
 
 [node name="Ship" parent="." unique_id=2034803724 instance=ExtResource("1_a02cp")]
 position = Vector2(80, 216)
+
+[node name="ParallaxBackground" parent="." unique_id=266024021 instance=ExtResource("2_go701")]
+
+[node name="EnemyGenerator" parent="." unique_id=727336805 instance=ExtResource("4_8j60k")]

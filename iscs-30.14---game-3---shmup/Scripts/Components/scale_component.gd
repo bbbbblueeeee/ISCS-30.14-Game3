@@ -2,7 +2,7 @@ class_name ScaleComponent
 extends Node
 
 @export var sprite: Node2D
-@export var scale_amount = Vector2(1.3,1.3)
+@export var scale_amount = Vector2(1.2,1.2)
 @export var scale_duration = 0.4
 
 

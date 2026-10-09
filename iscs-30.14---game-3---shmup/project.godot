@@ -24,6 +24,11 @@ window/size/window_height_override=960
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[layer_names]
+
+2d_physics/layer_1="player_hurtbox"
+2d_physics/layer_2="enemy_hurtbox"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

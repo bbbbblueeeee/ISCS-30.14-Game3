@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://lwmwqky73mwk"]
+
+[ext_resource type="Texture2D" uid="uid://b6fktuwmlr3fv" path="res://Assets/spr_stars01.png" id="1_0fo66"]
+[ext_resource type="Script" uid="uid://1ojvwrq42vx0" path="res://Scripts/parallax_background.gd" id="1_cl21a"]
+[ext_resource type="Texture2D" uid="uid://cyfcwlgrah1cb" path="res://Assets/nebula2.png" id="2_8ntqg"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" unique_id=266024021]
+script = ExtResource("1_cl21a")
+
+[node name="Space" type="ParallaxLayer" parent="." unique_id=23105030]
+
+[node name="ColorRect" type="ColorRect" parent="Space" unique_id=1411602689]
+offset_right = 169.0
+offset_bottom = 262.0
+color = Color(0.0041729663, 3.1585806e-08, 0.09213061, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Nebula" type="ParallaxLayer" parent="." unique_id=2065684186]
+unique_name_in_owner = true
+motion_mirroring = Vector2(0, 450)
+
+[node name="TextureRect" type="TextureRect" parent="Nebula" unique_id=530342505]
+offset_left = -75.0
+offset_top = 200.0
+offset_right = 2045.0
+offset_bottom = 1948.0
+rotation = 4.712389
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("2_8ntqg")
+stretch_mode = 1
+
+[node name="Stars" type="ParallaxLayer" parent="." unique_id=581326534]
+unique_name_in_owner = true
+motion_mirroring = Vector2(0, 1200)
+
+[node name="TextureRect" type="TextureRect" parent="Stars" unique_id=200084998]
+offset_left = -200.0
+offset_right = 2360.0
+offset_bottom = 2560.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_0fo66")
+stretch_mode = 1
