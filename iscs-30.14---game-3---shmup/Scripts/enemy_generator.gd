@@ -24,7 +24,6 @@ func handle_spawn(enemy_scene: PackedScene, timer: Timer) -> void:
 	spawner_component.scene = enemy_scene
 	spawner_component.spawn(Vector2(randf_range(margin, screen_width-margin), -16))
 	enemy_count += 1
-	print(enemy_count)
 
 func remove_enemy() -> void:
 	enemy_count -= 1
@@ -33,7 +32,6 @@ func end_spawning() -> void:
 	yellow_spawn_timer.timeout.disconnect(handle_spawn)
 	pink_spawn_timer.timeout.disconnect(handle_spawn)
 	game_ending = true
-	print(game_ending)
 	
 
 func _process(delta: float) -> void:
