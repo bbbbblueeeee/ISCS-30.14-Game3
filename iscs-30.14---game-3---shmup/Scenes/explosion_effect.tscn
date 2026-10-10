@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0va4lrl7exfn"]
 
-[ext_resource type="Script" uid="uid://cbhl04sj0agdp" path="res://onetime_animated_effect.gd" id="1_7hh0n"]
+[ext_resource type="Script" uid="uid://cbhl04sj0agdp" path="res://Scripts/onetime_animated_effect.gd" id="1_7hh0n"]
 [ext_resource type="Texture2D" uid="uid://d0rolbyflpiew" path="res://Assets/explosion.png" id="1_e44av"]
 [ext_resource type="AudioStream" uid="uid://dnuq8s1s56xay" path="res://Assets/mixkit-arcade-game-explosion-1699_iizPWLTw.wav" id="3_6saew"]
 

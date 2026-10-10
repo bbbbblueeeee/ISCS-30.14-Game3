@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b2ep352decwj0"]
+
+[ext_resource type="Script" uid="uid://bc8vy57a37d42" path="res://Scripts/menu.gd" id="1_xhh6f"]
+[ext_resource type="PackedScene" uid="uid://lwmwqky73mwk" path="res://Scenes/parallax_background.tscn" id="2_cayip"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x6u1j"]
+font_size = 8
+
+[node name="Menu" type="Control" unique_id=788968736]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhh6f")
+
+[node name="ParallaxBackground" parent="." unique_id=266024021 instance=ExtResource("2_cayip")]
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=30451553]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1711646485]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=751328743]
+layout_mode = 2
+text = "The Big Bang"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1105339592]
+layout_mode = 2
+text = "Press 'Enter' to Begin"
+label_settings = SubResource("LabelSettings_x6u1j")
+horizontal_alignment = 1

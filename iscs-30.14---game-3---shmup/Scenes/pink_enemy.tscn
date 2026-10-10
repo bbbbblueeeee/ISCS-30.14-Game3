@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://5ntu2017hcva"]
+
+[ext_resource type="PackedScene" uid="uid://bk5oq7tucfd8f" path="res://Scenes/enemy.tscn" id="1_ob8t3"]
+[ext_resource type="Texture2D" uid="uid://ba2o2113yhmb6" path="res://Assets/Untitled design (10).png" id="2_7misd"]
+[ext_resource type="Script" uid="uid://dylqrubt8nswr" path="res://Scenes/pink_enemy.gd" id="2_phu1h"]
+[ext_resource type="Script" uid="uid://bkaqw14yi6y5i" path="res://border_bounce_component.gd" id="4_o0fcj"]
+[ext_resource type="PackedScene" uid="uid://bgk57qwqqsspg" path="res://Scenes/enemy_laser.tscn" id="5_o0fcj"]
+[ext_resource type="Script" uid="uid://bo15wb3cbk0w5" path="res://Scripts/Components/spawner_component.gd" id="5_phu1h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6xws8"]
+radius = 31.0
+height = 88.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x6u1j"]
+radius = 23.0
+height = 74.0
+
+[node name="Enemy" unique_id=1534530197 instance=ExtResource("1_ob8t3")]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("2_phu1h")
+
+[node name="StatsComponent" parent="." index="0" unique_id=1044275728]
+health = 5
+
+[node name="Sprite2D" parent="." index="1" unique_id=532368439]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_7misd")
+
+[node name="MoveComponent" parent="." index="2" unique_id=1502702960]
+velocity = Vector2(20, 20)
+
+[node name="BorderBounceComponent" type="Node" parent="MoveComponent" index="0" unique_id=1313849239 node_paths=PackedStringArray("actor", "move_component")]
+script = ExtResource("4_o0fcj")
+actor = NodePath("../..")
+move_component = NodePath("..")
+metadata/_custom_type_script = "uid://bkaqw14yi6y5i"
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="3" unique_id=1882138109]
+rect = Rect2(-37, -56, 78, 95)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" parent_id_path=PackedInt32Array(1780840824) index="0" unique_id=717857268]
+position = Vector2(0, -6)
+shape = SubResource("CapsuleShape2D_6xws8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" parent_id_path=PackedInt32Array(661102773) index="0" unique_id=448714100]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_x6u1j")
+
+[node name="Marker2D" type="Marker2D" parent="." index="9" unique_id=80018578]
+position = Vector2(0, 29.999998)
+
+[node name="FireTimer" type="Timer" parent="." index="10" unique_id=1879888281]
+wait_time = 1.5
+autostart = true
+
+[node name="LaserSpawner" type="Node2D" parent="." index="11" unique_id=1998751583]
+script = ExtResource("5_phu1h")
+scene = ExtResource("5_o0fcj")
+metadata/_custom_type_script = "uid://bo15wb3cbk0w5"

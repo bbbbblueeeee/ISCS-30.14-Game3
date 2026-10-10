@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dkcxfycj7h00l" path="res://Assets/laserRed06.png" id="1_r1bh0"]
 [ext_resource type="Script" uid="uid://d0eqlvu6f6ug0" path="res://Scripts/Components/move_component.gd" id="2_mou6w"]
 [ext_resource type="Script" uid="uid://dxpmq61ynnli1" path="res://Scripts/Components/scale_component.gd" id="4_c8ure"]
-[ext_resource type="Script" uid="uid://c6p1wrcbbx8ad" path="res://hitbox_component.gd" id="5_krwe7"]
-[ext_resource type="Script" uid="uid://u1lthlirdtfx" path="res://destroyed_component.gd" id="6_r1vd4"]
-[ext_resource type="Script" uid="uid://b82arkbgqua32" path="res://stats_component.gd" id="7_0l8kr"]
+[ext_resource type="Script" uid="uid://c6p1wrcbbx8ad" path="res://Scripts/hitbox_component.gd" id="5_krwe7"]
+[ext_resource type="Script" uid="uid://u1lthlirdtfx" path="res://Scripts/destroyed_component.gd" id="6_r1vd4"]
+[ext_resource type="Script" uid="uid://b82arkbgqua32" path="res://Scripts/stats_component.gd" id="7_0l8kr"]
 [ext_resource type="Script" uid="uid://bo15wb3cbk0w5" path="res://Scripts/Components/spawner_component.gd" id="8_vuqqe"]
 [ext_resource type="PackedScene" uid="uid://c1jr616kkdifi" path="res://Scenes/small_explosion_effect.tscn" id="9_dekdl"]
 

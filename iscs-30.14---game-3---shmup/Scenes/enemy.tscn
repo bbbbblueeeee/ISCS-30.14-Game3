@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bk5oq7tucfd8f"]
 
 [ext_resource type="Script" uid="uid://bad884nuv5hax" path="res://Scripts/enemy.gd" id="1_287tu"]
-[ext_resource type="Script" uid="uid://b82arkbgqua32" path="res://stats_component.gd" id="1_afpow"]
+[ext_resource type="Script" uid="uid://b82arkbgqua32" path="res://Scripts/stats_component.gd" id="1_afpow"]
 [ext_resource type="Script" uid="uid://d0eqlvu6f6ug0" path="res://Scripts/Components/move_component.gd" id="2_287tu"]
-[ext_resource type="Script" uid="uid://bcy3twvi3igan" path="res://hurtbox_component.gd" id="5_0830c"]
+[ext_resource type="Script" uid="uid://bcy3twvi3igan" path="res://Scripts/hurtbox_component.gd" id="5_0830c"]
 [ext_resource type="Script" uid="uid://bo15wb3cbk0w5" path="res://Scripts/Components/spawner_component.gd" id="6_1dp5w"]
-[ext_resource type="Script" uid="uid://c6p1wrcbbx8ad" path="res://hitbox_component.gd" id="6_ghaa6"]
+[ext_resource type="Script" uid="uid://c6p1wrcbbx8ad" path="res://Scripts/hitbox_component.gd" id="6_ghaa6"]
 [ext_resource type="PackedScene" uid="uid://d0va4lrl7exfn" path="res://Scenes/explosion_effect.tscn" id="7_auwsv"]
-[ext_resource type="Script" uid="uid://u1lthlirdtfx" path="res://destroyed_component.gd" id="8_auwsv"]
-[ext_resource type="Script" uid="uid://62y8ffuigjqn" path="res://hurt_component.gd" id="9_8uf12"]
+[ext_resource type="Script" uid="uid://u1lthlirdtfx" path="res://Scripts/destroyed_component.gd" id="8_auwsv"]
+[ext_resource type="Script" uid="uid://62y8ffuigjqn" path="res://Scripts/hurt_component.gd" id="9_8uf12"]
 
 [node name="Enemy" type="Node2D" unique_id=1534530197]
 script = ExtResource("1_287tu")

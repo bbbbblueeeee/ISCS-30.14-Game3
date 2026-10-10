@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bgk57qwqqsspg"]
+
+[ext_resource type="PackedScene" uid="uid://o2mdkm65eya4" path="res://Scenes/laser.tscn" id="1_s2mcl"]
+[ext_resource type="Texture2D" uid="uid://dh8d24cejkcpf" path="res://Assets/laserBlue10.png" id="2_swast"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etviy"]
+size = Vector2(6, 6)
+
+[node name="Laser" unique_id=56496909 instance=ExtResource("1_s2mcl")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=478229238]
+z_index = 90
+texture = ExtResource("2_swast")
+
+[node name="MoveComponent" parent="." index="1" unique_id=1149316321]
+velocity = Vector2(0, 75)
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2" unique_id=1861355595]
+rect = Rect2(-4, -4, 8, 8)
+
+[node name="HitboxComponent" parent="." index="4" unique_id=114539039]
+collision_mask = 1
+
+[node name="CollisionShape2D" parent="HitboxComponent" index="0" unique_id=2062913807]
+shape = SubResource("RectangleShape2D_etviy")

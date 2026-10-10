@@ -3,15 +3,26 @@
 [ext_resource type="Script" uid="uid://dny53a63y7g5p" path="res://Scripts/enemy_generator.gd" id="1_7fxvk"]
 [ext_resource type="Script" uid="uid://bo15wb3cbk0w5" path="res://Scripts/Components/spawner_component.gd" id="1_ov16c"]
 [ext_resource type="PackedScene" uid="uid://wmqaosmxns0f" path="res://Scenes/yellow_enemy.tscn" id="2_y3q7s"]
+[ext_resource type="PackedScene" uid="uid://5ntu2017hcva" path="res://Scenes/pink_enemy.tscn" id="3_lqa58"]
 
 [node name="EnemyGenerator" type="Node2D" unique_id=727336805]
 script = ExtResource("1_7fxvk")
 YellowEnemyScene = ExtResource("2_y3q7s")
+PinkEnemyScene = ExtResource("3_lqa58")
 
 [node name="SpawnerComponent" type="Node2D" parent="." unique_id=1683405436]
 script = ExtResource("1_ov16c")
 metadata/_custom_type_script = "uid://bo15wb3cbk0w5"
 
 [node name="YellowSpawnTimer" type="Timer" parent="." unique_id=1577448238]
+wait_time = 1.5
+autostart = true
+
+[node name="PinkSpawnTimer" type="Timer" parent="." unique_id=1365345386]
+wait_time = 5.0
+autostart = true
+
+[node name="GameTimer" type="Timer" parent="." unique_id=1792387305]
+wait_time = 30.0
 one_shot = true
 autostart = true

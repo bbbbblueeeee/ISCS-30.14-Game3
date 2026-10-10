@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ISCS 30.14 - Game 3 - Shmup"
-run/main_scene="uid://bg2ef0yiieq4b"
+run/main_scene="uid://b2ep352decwj0"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 

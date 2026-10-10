@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdsd1is78iy3q"]
 
 [ext_resource type="Texture2D" uid="uid://d0rolbyflpiew" path="res://Assets/explosion.png" id="1_k25jf"]
-[ext_resource type="Script" uid="uid://cbhl04sj0agdp" path="res://onetime_animated_effect.gd" id="2_68cq6"]
+[ext_resource type="Script" uid="uid://cbhl04sj0agdp" path="res://Scripts/onetime_animated_effect.gd" id="2_68cq6"]
 [ext_resource type="AudioStream" uid="uid://wahfrd8h22pw" path="res://Assets/mixkit-epic-impact-afar-explosion-2782.wav" id="3_68cq6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rvjs3"]
